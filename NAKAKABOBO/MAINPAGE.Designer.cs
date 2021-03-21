@@ -126,7 +126,7 @@
             this.button3.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Image = global::NAKAKABOBO.Properties.Resources.business_report_48px1;
-            this.button3.Location = new System.Drawing.Point(615, 200);
+            this.button3.Location = new System.Drawing.Point(20, 239);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 101);
             this.button3.TabIndex = 3;
@@ -147,7 +147,7 @@
             this.button2.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Image = global::NAKAKABOBO.Properties.Resources.documents_48px;
-            this.button2.Location = new System.Drawing.Point(230, 67);
+            this.button2.Location = new System.Drawing.Point(245, 64);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(153, 122);
             this.button2.TabIndex = 7;
@@ -168,7 +168,7 @@
             this.btnstats.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnstats.ForeColor = System.Drawing.Color.Black;
             this.btnstats.Image = global::NAKAKABOBO.Properties.Resources.increase_48px;
-            this.btnstats.Location = new System.Drawing.Point(630, 78);
+            this.btnstats.Location = new System.Drawing.Point(657, 89);
             this.btnstats.Name = "btnstats";
             this.btnstats.Size = new System.Drawing.Size(101, 97);
             this.btnstats.TabIndex = 5;
@@ -189,7 +189,7 @@
             this.btnhistory.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnhistory.ForeColor = System.Drawing.Color.Black;
             this.btnhistory.Image = global::NAKAKABOBO.Properties.Resources.time_machine_40px;
-            this.btnhistory.Location = new System.Drawing.Point(419, 63);
+            this.btnhistory.Location = new System.Drawing.Point(425, 61);
             this.btnhistory.Name = "btnhistory";
             this.btnhistory.Size = new System.Drawing.Size(159, 125);
             this.btnhistory.TabIndex = 6;
@@ -209,7 +209,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(58, 300);
+            this.button4.Location = new System.Drawing.Point(680, 258);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(51, 38);
             this.button4.TabIndex = 4;
@@ -222,7 +222,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(40, 341);
+            this.label2.Location = new System.Drawing.Point(653, 309);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 19);
             this.label2.TabIndex = 12;

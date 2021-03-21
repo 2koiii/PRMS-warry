@@ -15,7 +15,7 @@ namespace NAKAKABOBO
     public partial class MAINPAGE : Form
     {
         //Thread th;
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=gaming-rig\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=axolo2l\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
         
 
         public MAINPAGE()

@@ -66,5 +66,10 @@ namespace NAKAKABOBO
         {
             Application.Run(new MAINPAGE());
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

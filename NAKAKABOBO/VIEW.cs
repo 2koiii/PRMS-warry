@@ -15,7 +15,7 @@ namespace NAKAKABOBO
     public partial class VIEW : Form
     {
         
-        SqlConnection con = new SqlConnection(@"Data Source=old-one\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=axolo2l\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
         public VIEW()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace NAKAKABOBO
         private void VIEW_Load(object sender, EventArgs e)
         {
             con.Open();
-            string query = "Select * from tbl_final3";
+            string query = "Select * from tbl_final2";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);

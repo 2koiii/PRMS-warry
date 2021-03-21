@@ -12,7 +12,7 @@ namespace NAKAKABOBO
 {
     public partial class MEDICATION : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=gaming-rig\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=axolo2l\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter dm;
         public MEDICATION()
@@ -38,7 +38,7 @@ namespace NAKAKABOBO
                 DataTable dt = new DataTable();
 
 
-                cmd = new SqlCommand("Select * From Patient_History4 where  LastName= '" + txtlast.Text + "' and FirstName=  '" + txtfirst.Text + "' ", con);
+                cmd = new SqlCommand("Select * From tbl_final2 where  LastName= '" + txtlast.Text + "' and FirstName=  '" + txtfirst.Text + "' ", con);
                 dm = new SqlDataAdapter(cmd);
                 dm.Fill(dt);
                 dataGridView1.DataSource = dt;
@@ -73,7 +73,7 @@ namespace NAKAKABOBO
 
         private void MEDICATION_Load(object sender, EventArgs e)
         {
-            string query = "Select * from Patient_History4";
+            string query = "Select * from tbl_final2";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);

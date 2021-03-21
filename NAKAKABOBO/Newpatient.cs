@@ -15,7 +15,7 @@ namespace NAKAKABOBO
     public partial class Newpatient : Form
     {
         private string status = "0";
-        SqlConnection con = new SqlConnection(@"Data Source=gaming-rig\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=axolo2l\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
         SqlCommand cmd;
 
         public Newpatient()
@@ -95,7 +95,7 @@ namespace NAKAKABOBO
                 {
 
                     con.Open();
-                    cmd = new SqlCommand("INSERT into tbl_final3 (LastName,FirstName,MiddleName,Gender,Contact_Number,Address,Time_Visited,Date_Visited,Medicine,Medical_Condition,Status) Values('"
+                    cmd = new SqlCommand("INSERT into tbl_final2 (LastName,FirstName,MiddleName,Gender,Contact_Number,Address,Time_Visited,Date_Visited,Medicine,Medical_Condition,Status) Values('"
                      + txtlast.Text + "','"
                      + txtfirst.Text + "','"
                      + txtmiddle.Text + "','"
@@ -106,16 +106,7 @@ namespace NAKAKABOBO
                      + dtdate.Text + "','"
                      + combomedicine.SelectedItem.ToString() + "','"
                      + combocondition.SelectedItem.ToString() + "','"
-                     + combostatus.SelectedItem.ToString() + "') Insert into Patient_History4 (LastName, FirstName,ContactNumber,Gender,Address,Time_Visited,Date_Visited,Medicine, MedicalCondition) values ('"
-                     + txtlast.Text + "','"
-                     + txtfirst.Text + "','"
-                     + txtcontact.Text+"','"
-                     + combogender.SelectedItem.ToString() + "','"
-                     + txtadd.Text + "','"
-                     + label1time.Text +"','"
-                     + dtdate.Text + "','"
-                     + combomedicine.SelectedItem.ToString() + "','"
-                     + combocondition.SelectedItem.ToString() + "')", con);
+                     + combostatus.SelectedItem.ToString() + "')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Patient Added Succesfully", "", MessageBoxButtons.OK, MessageBoxIcon.Information);

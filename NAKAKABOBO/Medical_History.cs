@@ -18,7 +18,7 @@ namespace NAKAKABOBO
     public partial class Medical_History : Form
     {
         Thread th;
-        SqlConnection con = new SqlConnection(@"Data Source=gaming-rig\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=axolo2l\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
         public Medical_History()
         {
             InitializeComponent();
@@ -39,7 +39,7 @@ namespace NAKAKABOBO
 
         private void txtsearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //SqlConnection conn = new SqlConnection(@"Data Source=gaming-rig\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
+            //SqlConnection conn = new SqlConnection(@"Data Source=axolo2l\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
 
             //SqlDataAdapter SDA = new SqlDataAdapter("Select HistoryID, LastName, FirstName,Gender,ContactNumber,Address,Time_Visited,Date_Visited,Medicine, MedicalCondition from Patient_History4 where LastName like '%" + txtsearch.Text + "%' And FirstName like '%" + txtsearch.Text + "%' " , conn);
             //DataTable dt = new DataTable();
@@ -101,7 +101,7 @@ namespace NAKAKABOBO
         private void Medical_History_Load(object sender, EventArgs e)
         {
 
-            //SqlConnection conn = new SqlConnection(@"Data Source=gaming-rig\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
+            //SqlConnection conn = new SqlConnection(@"Data Source=axolo2l\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
             //SqlConnection conn = new SqlConnection();
             //conn.ConnectionString = ConfigurationManager.ConnectionStrings["dbx"].ToString();
 
@@ -131,7 +131,7 @@ namespace NAKAKABOBO
 
         private void btnsearch_Click(object sender, EventArgs e)
         {
-            //SqlConnection conn = new SqlConnection(@"Data Source=gaming-rig\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
+            //SqlConnection conn = new SqlConnection(@"Data Source=axolo2l\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
 
             //SqlDataAdapter SDA = new SqlDataAdapter("Select * from Patient_History4 where FirstName ='" + textBox1.Text + "'  ", conn);
             //DataTable dt = new DataTable();

@@ -13,7 +13,7 @@ namespace NAKAKABOBO
 {
     public partial class LOGIN : Form
     {
-       // private string connectionString = @"Data Source=gaming-rig\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True";
+       // private string connectionString = @"Data Source=axolo2l\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True";
 
         public LOGIN()
         {
@@ -34,7 +34,7 @@ namespace NAKAKABOBO
         private void btnlogin_Click(object sender, EventArgs e)
         {
 
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=gaming-rig\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=axolo2l\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
             string query = "Select * from LOGIN where Username = '" + txtuser.Text.Trim() + "' and Password = '" + txtlogin.Text.Trim() + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
             DataTable dtbl = new DataTable();

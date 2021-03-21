@@ -12,7 +12,7 @@ namespace NAKAKABOBO
     {
         //Thread th;
         private string status = "0";
-        SqlConnection con = new SqlConnection(@"Data Source=gaming-rig\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=axolo2l\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True");
         SqlCommand cmd;
         //int Record_ID;
        
@@ -32,72 +32,11 @@ namespace NAKAKABOBO
             txtcontact.ReadOnly = true;
             txtadd.ReadOnly = true;
 
-            //string query = "Select * from tbl_final3";
-            //SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            //DataTable dt = new DataTable();
-            //SDA.Fill(dt);
-            //dataGridView1.DataSource = dt;
-            //dataGridView1.Columns[0].Visible = false;
-
-
-            //LoadData();
-
-
-            //    try
-            //    {
-            //        SqlDataAdapter data = new SqlDataAdapter("Select SUM(Total)Total From tbl_final2 where Gender='Male' ", connectionstring);
-            //        DataTable ss = new DataTable();
-            //        data.Fill(ss);
-            //        dataGridView1.DataSource = ss;
-            //        dataGridView1.AllowUserToAddRows = false;
-
-            //        for (int i = 0; i <= dataGridView1.Columns.Count - 1; i++)
-            //        {
-            //            int total =
-            //            Convert.ToInt32(dataGridView1.Rows[i].Cells["Total"].Value.ToString());
-
-            //            lblMale.Text = total.ToString().Trim();
-            //        }
-            //    }
-            //    catch (Exception)
-            //    { }
-            //    try
-            //    {
-            //        SqlDataAdapter data = new SqlDataAdapter("Select SUM(Total)Total From tbl_final2 where Gender='Female'  ", connectionstring);
-            //        DataTable ss = new DataTable();
-            //        data.Fill(ss);
-            //        dataGridView1.DataSource = ss;
-            //        dataGridView1.AllowUserToAddRows = false;
-
-            //        for (int i = 0; i <= dataGridView1.Columns.Count - 1; i++)
-            //        {
-            //            int total = Convert.ToInt32(dataGridView1.Rows[i].Cells["Total"].Value.ToString());
-
-            //            lblFemale.Text = total.ToString().Trim();
-            //        }
-            //    }
-            //    catch (Exception)
-            //    {
-            //    }
-
-            //    //chart1.Titles.Add("Pie Chart").Font = new Font("Century Gothic", 14, FontStyle.Bold);
-
-            //    chart1.Series["Series1"].IsValueShownAsLabel = true;
-            //    chart1.Series["Series1"].Points.AddXY("Male:" + lblMale.Text + "", lblMale.Text);
-            //    chart1.Series["Series1"].Points.AddXY("Female:" + lblFemale.Text + "", lblFemale.Text);
-            //}
+            
         }
         private void LoadData()
         {
-            //chart1.Titles.Add("Pie Chart").Font = new Font("Century Gothic", 14, FontStyle.Bold);
-            //chart1.DataSource = GetData();
-            
-            //chart1.Series["Series1"].XValueMember = "Gender";
-            //chart1.Series["Series1"].XValueMember = "Medical_Condition";
-            //chart1.Series["Series1"].YValueMembers = "Total";
-
-            //chart1.Series["Series1"].Points.AddXY("Male:" + lblMale.Text + "", lblMale.Text);
-            //chart1.Series["Series1"].Points.AddXY("Female:" + lblFemale.Text + "", lblFemale.Text);
+           
 
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -141,7 +80,7 @@ namespace NAKAKABOBO
                     try
                     {
                         con.Open();
-                        cmd = new SqlCommand("INSERT into tbl_final3 (LastName,FirstName,MiddleName,Gender,Contact_Number,Address,Time_Visited,Date_Visited,Medicine,Medical_Condition,Status) Values('"
+                        cmd = new SqlCommand("INSERT into tbl_final2 (LastName,FirstName,MiddleName,Gender,Contact_Number,Address,Time_Visited,Date_Visited,Medicine,Medical_Condition,Status) Values('"
                          + txtlast.Text + "','"
                          + txtfirst.Text + "','"
                          + txtmiddle.Text + "','"
@@ -152,16 +91,7 @@ namespace NAKAKABOBO
                          + dtdate.Text + "','"
                          + combomedicine.SelectedItem.ToString() + "','"
                          + combocondition.SelectedItem.ToString() + "','"
-                         + combostatus.SelectedItem.ToString() + "') Insert into Patient_History4 (LastName, FirstName,ContactNumber,Gender,Address,Time_Visited,Date_Visited,Medicine, MedicalCondition) values ('"
-                         + txtlast.Text + "','"
-                         + txtfirst.Text + "','"
-                         + txtcontact.Text + "','"
-                         + combogender.Text + "','"
-                         + txtadd.Text + "','"
-                         + label13.Text + "','"
-                         + dtdate.Text + "','"
-                         + combomedicine.Text + "','"
-                         + combocondition.Text + "')", con);
+                         + combostatus.SelectedItem.ToString() + "')", con);
                         cmd.ExecuteNonQuery();
                         con.Close();
                         MessageBox.Show("Patient Added Succesfully", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -191,14 +121,14 @@ namespace NAKAKABOBO
         {
             txtlast.Clear();
 
-            String source  = @"Data Source=gaming-rig\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True";
+            String source  = @"Data Source=axolo2l\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True";
             SqlConnection con = new SqlConnection(source);
             con.Open();
 
             //string Xstring = "4";
             //int x = int.Parse(Xstring);
 
-            String sqlSelectQuery = "Select ID, LastName,FirstName,MiddleName,Gender,Contact_Number,Address from tbl_final3 WHERE LastName= '" + textBox1.Text+ "' and FirstName='" +textBox2.Text+ "' ";
+            String sqlSelectQuery = "Select ID, LastName,FirstName,MiddleName,Gender,Contact_Number,Address from tbl_final2 WHERE LastName= '" + textBox1.Text+ "' and FirstName='" +textBox2.Text+ "' ";
             SqlCommand cmd = new SqlCommand(sqlSelectQuery, con);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
@@ -248,24 +178,10 @@ namespace NAKAKABOBO
                 textBox2.ForeColor = Color.Black;
         }
 
-        //DataTable dtChartData = new DataTable();
+        private void combostatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-        //using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["dbx"].ConnectionString)) 
-        //{
-        //    using (SqlCommand cmd = new SqlCommand("usp_ChartData7", conn))
-        //    {
-        //        cmd.CommandType = CommandType.StoredProcedure;
-        //        conn.Open();
-
-        //        SqlDataReader reader = cmd.ExecuteReader();
-
-        //        dtChartData.Load(reader);
-
-        //    }
-        //}
-
-
-        //    return dtChartData;
+        }
     }
 }
 

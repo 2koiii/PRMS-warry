@@ -328,13 +328,14 @@
             this.combostatus.FormattingEnabled = true;
             this.combostatus.Items.AddRange(new object[] {
             "<Select Status>",
-            "TREATED",
-            "NOT TREATED",
-            "REFERRED"});
+            "Treated",
+            "Not Treated",
+            "Referred"});
             this.combostatus.Location = new System.Drawing.Point(171, 176);
             this.combostatus.Name = "combostatus";
             this.combostatus.Size = new System.Drawing.Size(172, 24);
             this.combostatus.TabIndex = 21;
+            this.combostatus.SelectedIndexChanged += new System.EventHandler(this.combostatus_SelectedIndexChanged);
             // 
             // combocondition
             // 

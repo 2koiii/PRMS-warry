@@ -12,7 +12,7 @@ namespace NAKAKABOBO
 {
     public partial class BAR_Graph : Form
     {
-        string connectionstring = @"Data Source=gaming-rig\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True";
+        string connectionstring = @"Data Source=axolo2l\SQLEXPRESS;Initial Catalog=FINAL_DB;Integrated Security=True";
         public BAR_Graph()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace NAKAKABOBO
         {
             try
             {
-                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)ID From [dbo].[tbl_final3] where Medical_Condition='Fever' ", connectionstring);
+                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)ID From [dbo].[tbl_final2] where Medical_Condition='Fever' ", connectionstring);
                 DataTable ss = new DataTable();
                 data.Fill(ss);
                 dataGridView1.DataSource = ss;
@@ -44,7 +44,7 @@ namespace NAKAKABOBO
             }
             try
             {
-                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)ID From[dbo].[tbl_final3] where Medical_Condition = 'Cough' ", connectionstring);
+                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)ID From[dbo].[tbl_final2] where Medical_Condition = 'Cough' ", connectionstring);
                 DataTable ss = new DataTable();
                 data.Fill(ss);
                 dataGridView1.DataSource = ss;
@@ -62,7 +62,7 @@ namespace NAKAKABOBO
             }
             try
             {
-                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)ID From[dbo].[tbl_final3] where Medical_Condition = 'Diarrhea' ", connectionstring);
+                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)ID From[dbo].[tbl_final2] where Medical_Condition = 'Diarrhea' ", connectionstring);
                 DataTable ss = new DataTable();
                 data.Fill(ss);
                 dataGridView1.DataSource = ss;
@@ -80,7 +80,7 @@ namespace NAKAKABOBO
             }
             try
             {
-                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)TOtal From[dbo].[tbl_final3] where Medical_Condition = 'Cold' ", connectionstring);
+                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)TOtal From[dbo].[tbl_final2] where Medical_Condition = 'Cold' ", connectionstring);
                 DataTable ss = new DataTable();
                 data.Fill(ss);
                 dataGridView1.DataSource = ss;
@@ -98,7 +98,7 @@ namespace NAKAKABOBO
             }
             try
             {
-                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)TOtal From[dbo].[tbl_final3] where Medical_Condition = 'Dysmenorhea' ", connectionstring);
+                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)TOtal From[dbo].[tbl_final2] where Medical_Condition = 'Dysmenorhea' ", connectionstring);
                 DataTable ss = new DataTable();
                 data.Fill(ss);
                 dataGridView1.DataSource = ss;
@@ -116,7 +116,7 @@ namespace NAKAKABOBO
             }
             try
             {
-                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)TOtal From[dbo].[tbl_final3] where Medical_Condition = 'Stomach Ache' ", connectionstring);
+                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)TOtal From[dbo].[tbl_final2] where Medical_Condition = 'Stomach Ache' ", connectionstring);
                 DataTable ss = new DataTable();
                 data.Fill(ss);
                 dataGridView1.DataSource = ss;
@@ -134,7 +134,7 @@ namespace NAKAKABOBO
             }
             try
             {
-                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)TOtal From[dbo].[tbl_final3] where Medical_Condition = 'Head Ache' ", connectionstring);
+                SqlDataAdapter data = new SqlDataAdapter("select COUNT(ID)TOtal From[dbo].[tbl_final2] where Medical_Condition = 'Head Ache' ", connectionstring);
                 DataTable ss = new DataTable();
                 data.Fill(ss);
                 dataGridView1.DataSource = ss;
